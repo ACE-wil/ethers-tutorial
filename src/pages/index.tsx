@@ -8,13 +8,29 @@ import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 import { useHistory } from "@docusaurus/router";
 import Button from "@site/src/components/Button";
+import { ethers } from "ethers";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   const history = useHistory();
+  const [balance, setBalance] = React.useState<string>('');
 
   function handleClick() {
     history.push("/docs/basic");
+  }
+
+  async function getBalance() {
+    try {
+      const provider = new ethers.JsonRpcProvider('https://rpc.buildbear.io/correct-sabretooth-574414f3');
+      const balance = await provider.getBalance('0x56ecf322E38931f31F2f3b2262e589EEa58ad5ed');
+      console.log('====================================');
+      console.log(balance.toString());
+      console.log('====================================');
+      setBalance(balance.toString());
+    } catch (error) {
+      console.error('获取余额失败:', error);
+      setBalance('获取失败');
+    }
   }
 
   return (
@@ -30,6 +46,9 @@ function HomepageHeader() {
         </p>
         <div className={styles.buttons}>
           <Button onClick={handleClick}>开始学习</Button>
+        </div>
+        <div className={styles.buttons}>
+          <Button onClick={getBalance}>获取余额: {balance || '点击获取'}</Button>
         </div>
         <div className={styles.featureGrid}>
           <div className={styles.featureItem}>
