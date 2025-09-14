@@ -20,6 +20,10 @@ function HomepageHeader() {
     history.push("/docs/basic");
   }
 
+  function handleTransactClick() {
+    history.push("/transact");
+  }
+
   function getBalance() {
    provider.getBalance('0x56ecf322E38931f31F2f3b2262e589EEa58ad5ed').then((balance) => {
     
@@ -84,6 +88,7 @@ function HomepageHeader() {
         </p>
         <div className={styles.buttons}>
           <Button onClick={handleClick}>开始学习</Button>
+          <Button onClick={handleTransactClick}>去转账</Button>
         </div>
         <span style={{color:"black"}}>
           balance: {balance?.toString()}

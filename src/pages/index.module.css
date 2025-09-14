@@ -35,7 +35,9 @@
 .buttons {
   display: flex;
   justify-content: center;
+  gap: 1rem;
   margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
 .buttons a {
