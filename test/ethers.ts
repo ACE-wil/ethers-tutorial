@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 
-const provider = new ethers.JsonRpcProvider('https://rpc.buildbear.io/scornful-magma-25161a76')
+const provider = new ethers.JsonRpcProvider('https://ethereum.publicnode.com')
  
 // getBalance获取余额
 

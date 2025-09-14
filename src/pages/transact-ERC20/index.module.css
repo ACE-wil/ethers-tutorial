@@ -25,7 +25,6 @@
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
 }
 
 .formGroup {
@@ -82,15 +81,26 @@
   background: #0958d9;
 }
 
-.balanceInfo {
-  background: #f0f9ff;
-  border: 1px solid #bae6fd;
+.tokenInfo {
+  background: #e0f2fe;
+  border: 1px solid #81d4fa;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
-  color: #0369a1;
-  font-weight: 600;
-  text-align: center;
+  color: #0277bd;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.tokenUnit {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  pointer-events: none;
 }
 
 .gasInfo {
@@ -357,6 +367,13 @@
     text-align: left;
     max-width: 100%;
   }
+  
+  .tokenUnit {
+    position: static;
+    transform: none;
+    margin-top: 0.5rem;
+    display: block;
+  }
 }
 
 /* 输入框组样式优化 */
@@ -364,8 +381,16 @@
   padding-right: 140px;
 }
 
+.formGroup:has(.tokenUnit) .input {
+  padding-right: 80px;
+}
+
 @media screen and (max-width: 768px) {
   .formGroup:has(.balanceBtn) .input {
+    padding-right: 1rem;
+  }
+  
+  .formGroup:has(.tokenUnit) .input {
     padding-right: 1rem;
   }
 }

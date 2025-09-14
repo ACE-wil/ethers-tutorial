@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 
 const provider = new ethers.JsonRpcProvider(
-    "https://rpc.buildbear.io/scornful-magma-25161a76"
+    "https://ethereum.publicnode.com"
   );
   // 编写交互ABI，后面会介绍ABI是什么
   const abi = [

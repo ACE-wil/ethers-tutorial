@@ -48,11 +48,50 @@
   background-color: #1677ff;
   color: #ffffff;
   border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .buttons a:hover {
   background-color: #0958d9;
   text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(22, 119, 255, 0.3);
+}
+
+/* Button组件在主页中的样式覆盖 */
+.buttons button {
+  font-size: 1.1rem !important;
+  padding: 0.8rem 2rem !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+  background-color: #1677ff !important;
+  color: #ffffff !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+  gap: 0 !important;
+  font-weight: 600 !important;
+  letter-spacing: normal !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.buttons button:hover {
+  background-color: #0958d9 !important;
+  text-decoration: none !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(22, 119, 255, 0.3) !important;
+}
+
+.buttons button:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(22, 119, 255, 0.3) !important;
 }
 
 .featureGrid {

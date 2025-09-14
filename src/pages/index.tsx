@@ -15,13 +15,17 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   const history = useHistory();
   const { netWork, setNetWork, balance, setBalance, feeData, setFeeData, blockNumber, setBlockNumber, transaction, setTransaction } = useHomeStore();
-  const provider = new ethers.JsonRpcProvider('https://rpc.buildbear.io/scornful-magma-25161a76');
+  const provider = new ethers.JsonRpcProvider('https://ethereum.publicnode.com');
   function handleClick() {
     history.push("/docs/basic");
   }
 
   function handleTransactClick() {
     history.push("/transact");
+  }
+
+  function handleERC20TransactClick() {
+    history.push("/transact-ERC20");
   }
 
   function getBalance() {
@@ -88,7 +92,8 @@ function HomepageHeader() {
         </p>
         <div className={styles.buttons}>
           <Button onClick={handleClick}>开始学习</Button>
-          <Button onClick={handleTransactClick}>去转账</Button>
+          <Button onClick={handleTransactClick}>ETH转账</Button>
+          <Button onClick={handleERC20TransactClick}>ERC-20转账</Button>
         </div>
         <span style={{color:"black"}}>
           balance: {balance?.toString()}

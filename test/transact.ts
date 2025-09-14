@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 // 配置提供者（例如 buildbear、Infura、Alchemy 或本地节点）
 const provider = new ethers.JsonRpcProvider(
   // 填写你的 RPC 节点，请不要使用下面
-  "https://rpc.buildbear.io/scornful-magma-25161a76"
+  "https://ethereum.publicnode.com"
 
 );  
 

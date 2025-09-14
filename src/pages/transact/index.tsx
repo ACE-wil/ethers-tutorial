@@ -14,7 +14,7 @@ function TransactPage() {
   const [privateKey, setPrivateKey] = useState("");
   const [recipientAddress, setRecipientAddress] = useState("");
   const [amount, setAmount] = useState("");
-  const [rpcUrl, setRpcUrl] = useState("https://rpc.buildbear.io/scornful-magma-25161a76");
+  const [rpcUrl, setRpcUrl] = useState("https://ethereum.publicnode.com");
   const [isLoading, setIsLoading] = useState(false);
   const [transactionHash, setTransactionHash] = useState("");
   const [error, setError] = useState("");
